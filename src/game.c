@@ -30,6 +30,8 @@ void gameLoop(void){
 
         updateDir(&state_game.uad_, state_game.ua_);
 
+        checkCollidedSnakeWall(&state_game);
+
         uint8_t snakeTailY_ = state_game.ss_.snakeY_[state_game.ss_.sizeSnake_ - 1];
         uint8_t snakeTailX_ = state_game.ss_.snakeX_[state_game.ss_.sizeSnake_ - 1];
 
@@ -60,4 +62,16 @@ void initGame(stateGame *state_game){
     state_game->ssp_.startSnakeX_ = 15;
     state_game->ssp_.startSnakeY_ = 15;
     initSnake(&state_game->ss_, &state_game->ssp_);
+}
+
+// checking whether the snake has collided with the wall
+bool checkCollidedSnakeWall(stateGame *state_game){
+    uint8_t headSnakeX = state_game->ss_.snakeX_[0];
+    uint8_t headSnakeY = state_game->ss_.snakeY_[0];
+
+    if(state_game->m_.map_[headSnakeY][headSnakeX] == 1){
+        return true;
+    }
+
+    return false;
 }
