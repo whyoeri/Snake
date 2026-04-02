@@ -8,13 +8,13 @@
 typedef struct{
     uint8_t foodX_; 
     uint8_t foodY_;
-} food_position;
+} foodPosition;
 
 // the control function for coordinate generation and food rendering
-food_position spawnFood(rng_t *rng, uint32_t minX, uint32_t maxX, uint32_t minY, uint32_t maxY);
+foodPosition spawnFood(rng_t *rng, uint32_t minX, uint32_t maxX, uint32_t minY, uint32_t maxY);
 
 // food illustration
-void drawFood(const food_position *food_pos);
+void drawFood(const foodPosition *food_position);
 
 // generation of food coordinates
 uint32_t genFoodX(rng_t *rng, uint32_t min, uint32_t max);
