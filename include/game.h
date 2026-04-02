@@ -27,4 +27,7 @@ void gameLoop(void);
 // initialisation of the game's starting state
 void initGame(stateGame *state_game);
 
+// checking whether the snake has collided with the wall
+bool checkCollidedSnakeWall(stateGame *state_game);
+
 #endif
