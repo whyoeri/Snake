@@ -1,7 +1,7 @@
 #include "control.h"
 
 // input initialisation
-Action inputAction(int ch){
+userAction inputUserAction(int ch){
     switch(ch){
         case 'W':
         case 'w':
@@ -34,7 +34,7 @@ Action inputAction(int ch){
 }
 
 // update on the direction
-void updateDir(Action *dir, Action action){
+void updateDir(userAction *dir, userAction action){
     if(!dir){return;}
     else if(action == QUIT || action == NONE){return;}
 

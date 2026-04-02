@@ -9,12 +9,12 @@ typedef enum{
     LEFT, 
     NONE, 
     QUIT
-} Action;
+} userAction;
 
 // input initialisation
-Action inputAction(int ch); 
+userAction inputUserAction(int ch); 
 
 // update on the direction
-void updateDir(Action *dir, Action action);
+void updateDir(userAction *dir, userAction action);
 
 #endif
