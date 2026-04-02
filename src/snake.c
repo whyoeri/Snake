@@ -14,3 +14,33 @@ void drawSnake(const stateSnake *state_snake){
         mvprintw(state_snake->snakeY_[i], state_snake->snakeX_[i], "o");
     }
 }
+
+// the snake's movements
+void moveSnake(stateSnake *ss, userAction ua){
+    for(uint16_t i = ss->sizeSnake_ - 1; i > 0; i--){
+        ss->snakeX_[i] = ss->snakeX_[i - 1];
+        ss->snakeY_[i] = ss->snakeY_[i - 1];
+    }
+
+    switch(ua){
+        case UP:{
+            ss->snakeY_[0]--;
+            break;
+        }
+        case DOWN:{
+            ss->snakeY_[0]++;
+            break;
+        }
+        case LEFT:{
+            ss->snakeX_[0]--;
+            break;
+        }
+        case RIGHT:{
+            ss->snakeX_[0]++;
+            break;
+        }
+        default:{
+            break;
+        }
+    }
+}

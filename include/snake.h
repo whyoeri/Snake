@@ -2,6 +2,7 @@
 #define SNAKE_H
 
 #include <stdint.h>
+#include "control.h"
 
 // the starting coordinates of the snake
 typedef struct{
@@ -31,5 +32,8 @@ void initSnake(stateSnake *state_snake, const startSnakePosition *start_snake);
 
 // drawing a snake
 void drawSnake(const stateSnake *state_snake);
+
+// the snake's movements
+void moveSnake(stateSnake *ss, userAction ua);
 
 #endif
