@@ -1,6 +1,6 @@
 #include "generator.h"
 
-// initialize generator with a seed value 
+// install initial generator seed 
 void rngSeed(rng_t *r, uint32_t seed){
     if(seed == 0){seed = 0xACE1;}
     r->state_ = seed;
