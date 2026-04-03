@@ -70,6 +70,7 @@ void gameLoop(void){
     }
     endwin(); // reset ncurses settings; restore the terminal to its default state
     clear_screen();
+    clear_buffer(); // clearing the buffer of any remaining user input
     gameover(&game); // display statistics before returning to the main menu
 }
 
@@ -83,6 +84,10 @@ void gameover(stateGame *game){
     if(game->state_snake_.sizeSnake_ == 1280){
         printf("How did you manage that? Well done!\n");
     }
+
+    printf("Press any button to return to the main menu\n");
+    getchar();
+    clear_screen();
 }
 
 // initialisation of the game's starting state
