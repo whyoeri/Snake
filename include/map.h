@@ -2,6 +2,7 @@
 #define MAP_H
 
 #include <stdint.h>
+#include <stddef.h>
 
 #define HEIGHT_MAP 25
 #define WIDTH_MAP 50
@@ -11,9 +12,6 @@ typedef struct{
 } map_t;
 
 // map initialisation
-void mapInitialisation(map_t *map);
-
-// rendering the map based on the initialised values
-void drawMap(const map_t *map);
+void initMap(map_t *map);
 
 #endif
