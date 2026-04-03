@@ -71,7 +71,7 @@ void output_help_menu(void){
     printf("Description:\n");
     printf("%sClassic Snake game where you control a growing snake.\nEat food to increase your score and length,\nbut avoid walls and your own tail, or the game ends.%s\n", GREEN, RESET_COLOR);
     printf("Control:\n");
-    printf("%sUse the WASD keys to control the game. Press Q or q to exit the game.%s\n", GREEN, RESET_COLOR);
+    printf("%sUse the WASD keys or arrow keys to control the game. Press Q or q to exit the game.%s\n", GREEN, RESET_COLOR);
     printf("Version:\n");
     printf("%s%s%s\n", GREEN, VERSION, RESET_COLOR);
     printf("Creator:\n");
