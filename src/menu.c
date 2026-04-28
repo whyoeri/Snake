@@ -75,9 +75,9 @@ void output_help_menu(void){
     printf("Version:\n");
     printf("%s%s%s\n", GREEN, VERSION, RESET_COLOR);
     printf("Creator:\n");
-    printf("%swyoeri%s\n", GREEN, RESET_COLOR);
+    printf("%swhyoeri%s\n", GREEN, RESET_COLOR);
     printf("More information:\n");
-    printf("%shttps://github.com/wyoeri/Snake%s\n", GREEN, RESET_COLOR);
+    printf("%shttps://github.com/whyoeri/Snake%s\n", GREEN, RESET_COLOR);
     printf("0. Go to the main menu\n");
 }
 
